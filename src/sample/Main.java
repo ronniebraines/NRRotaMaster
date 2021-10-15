@@ -27,6 +27,7 @@ public class Main extends Application {
             ///jdbc.addNewColumn("TBLWarrior", "practicecollumn", "INT");
             jdbc.viewAll("TBLWarrior" , "ID");
             //jdbc.viewAllRecordsInCollumn("TBLWarrior", "ID");
+            System.out.println("TEST CHANGE");
             launch(args);
         }catch (Exception e){
             System.out.println(e.getMessage());
