@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("interface.fxml"));
         primaryStage.setTitle("practice database");
-        primaryStage.setScene(new Scene(root, 600, 600));
+        primaryStage.setScene(new Scene(root, 1015, 678));
         primaryStage.show();
     }
 
@@ -27,7 +27,6 @@ public class Main extends Application {
             ///jdbc.addNewColumn("TBLWarrior", "practicecollumn", "INT");
             jdbc.viewAll("TBLWarrior" , "ID");
             //jdbc.viewAllRecordsInCollumn("TBLWarrior", "ID");
-            System.out.println("TEST CHANGE");
             launch(args);
         }catch (Exception e){
             System.out.println(e.getMessage());
