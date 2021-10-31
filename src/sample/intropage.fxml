@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="678.0" prefWidth="1015.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="678.0" prefWidth="1015.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.IntroPageController">
    <children>
       <Circle id="myCircle" fx:id="myCircle" fill="#ff861f" layoutX="488.0" layoutY="331.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
       <Circle id="myCircle2" fx:id="myCircle1" fill="#ff4321" layoutX="441.0" layoutY="331.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
       <Circle id="myCircle3" fx:id="myCircle2" fill="#0f0697" layoutX="536.0" layoutY="331.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
-      <Label layoutX="341.0" layoutY="153.0" prefHeight="114.0" prefWidth="294.0" text="Network Rail">
+      <Label alignment="CENTER" layoutX="341.0" layoutY="153.0" prefHeight="114.0" prefWidth="294.0" text="Network Rail">
          <font>
             <Font name="SansSerif Regular" size="51.0" />
          </font>
@@ -20,5 +21,10 @@
             <Font size="49.0" />
          </font>
       </Label>
+      <Button fx:id="continueButton" alignment="BOTTOM_CENTER" layoutX="445.0" layoutY="496.0" mnemonicParsing="false" onAction="#handleClick" text="Continue">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
