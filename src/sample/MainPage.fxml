@@ -116,6 +116,7 @@
                   <JFXButton prefHeight="202.0" prefWidth="301.0" ripplerFill="RED" />
                   <JFXButton prefHeight="154.0" prefWidth="231.0" ripplerFill="RED" />
                </children>
+
             </HBox>
          </center>
       </BorderPane>
