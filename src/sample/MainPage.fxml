@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="781.0" prefWidth="1158.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainPageController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="781.0" prefWidth="1158.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainPageController">
     <children>
       <BorderPane layoutX="-14.0" layoutY="14.0" prefHeight="767.0" prefWidth="1158.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
@@ -111,7 +111,12 @@
                </children></AnchorPane>
          </top>
          <center>
-            <JFXButton prefHeight="25.0" prefWidth="126.0" ripplerFill="RED" BorderPane.alignment="CENTER" />
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton prefHeight="202.0" prefWidth="301.0" ripplerFill="RED" />
+                  <JFXButton prefHeight="154.0" prefWidth="231.0" ripplerFill="RED" />
+               </children>
+            </HBox>
          </center>
       </BorderPane>
     </children>
