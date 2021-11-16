@@ -1,124 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="781.0" prefWidth="1158.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainPageController">
     <children>
-      <BorderPane layoutX="-14.0" layoutY="14.0" prefHeight="767.0" prefWidth="1158.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane layoutY="14.0" prefHeight="767.0" prefWidth="1168.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
          <left>
-            <AnchorPane prefHeight="616.0" prefWidth="340.0" BorderPane.alignment="CENTER">
+            <AnchorPane fx:id="menuInterface" prefHeight="690.0" prefWidth="340.0" style="-fx-background-color: #c95400;" BorderPane.alignment="CENTER">
                <children>
-                    <VBox prefHeight="701.0" prefWidth="340.0" style="-fx-background-color: #c95400;" AnchorPane.bottomAnchor="0.0">
-                        <children>
-                            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="340.0" text="Search for signalman">
-                                <graphic>
-                                    <ImageView fitHeight="26.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
-                                        <image>
-                                            <Image url="@icons/7830741_human_resources_search_employees_icon.png" />
-                                        </image>
-                                    </ImageView>
-                                </graphic>
-                                <font>
-                                    <Font size="18.0" />
-                                </font>
-                            </Button>
-                            <HBox prefHeight="35.0" prefWidth="340.0">
-                                <children>
-                                    <Label prefWidth="200.0" text="Current week: 01 Jan 2021" textFill="WHITE">
-                                        <font>
-                                            <Font size="16.0" />
-                                        </font>
-                                    </Label>
-                                    <Button mnemonicParsing="false" prefWidth="70.0" text="Prev">
-                                        <font>
-                                            <Font size="16.0" />
-                                        </font>
-                                    </Button>
-                                    <Button mnemonicParsing="false" prefWidth="70.0" text="Next">
-                                        <font>
-                                            <Font size="16.0" />
-                                        </font>
-                                    </Button>
-                                </children>
-                            </HBox>
-                            <Button fx:id="SELECT_BUTTON" mnemonicParsing="false" onAction="#selectCurrentWeek" prefHeight="100.0" prefWidth="340.0" text="Select Week">
-                                <graphic>
-                                    <ImageView fitHeight="26.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
-                                        <image>
-                                            <Image url="@icons/selectAll.png" />
-                                        </image>
-                                    </ImageView>
-                                </graphic>
-                                <font>
-                                    <Font size="18.0" />
-                                </font>
-                            </Button>
-                            <Button fx:id="VIEW_BUTTON" mnemonicParsing="false" onAction="#viewCurrentRota" prefHeight="100.0" prefWidth="340.0" text="View Rota">
-                                <graphic>
-                                    <ImageView fitHeight="49.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
-                                        <image>
-                                            <Image url="@icons/calendar2.png" />
-                                        </image>
-                                    </ImageView>
-                                </graphic>
-                                <font>
-                                    <Font size="18.0" />
-                                </font>
-                            </Button>
-                            <Button fx:id="EDIT_BUTTON" mnemonicParsing="false" onAction="#editCurrentRota" prefHeight="100.0" prefWidth="340.0" text="Edit Rota">
-                                <graphic>
-                                    <ImageView fitHeight="26.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
-                                        <image>
-                                            <Image url="@icons/editIcon.png" />
-                                        </image>
-                                    </ImageView>
-                                </graphic>
-                                <font>
-                                    <Font size="18.0" />
-                                </font>
-                            </Button>
-                            <Button fx:id="NEW_ROTA_BUTTON" mnemonicParsing="false" onAction="#generateNewRota" prefHeight="100.0" prefWidth="340.0" text="Generate New Rota">
-                                <graphic>
-                                    <ImageView fitHeight="26.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
-                                        <image>
-                                            <Image url="@icons/dnaHelix.png" />
-                                        </image>
-                                    </ImageView>
-                                </graphic>
-                                <font>
-                                    <Font size="18.0" />
-                                </font>
-                            </Button>
-                        </children>
+                    <VBox prefHeight="609.0" prefWidth="340.0" AnchorPane.bottomAnchor="0.0">
+                     <children>
+                        <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" prefHeight="96.0" prefWidth="340.0" text="View Rota" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/calendar2.png" />
+                                 </image></ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" prefHeight="96.0" prefWidth="340.0" text="Generate new Rota" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/dnaHelix.png" />
+                                 </image></ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" prefHeight="96.0" prefWidth="340.0" text="Edit Rota Settings" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="81.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/editcalendar.png" />
+                                 </image></ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" prefHeight="96.0" prefWidth="340.0" text="Print Rota" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/print.png" />
+                                 </image></ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" prefHeight="96.0" prefWidth="340.0" text="Share Rota" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/share.png" />
+                                 </image></ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
                     </VBox>
                </children>
             </AnchorPane>
          </left>
          <top>
-            <AnchorPane prefHeight="80.0" prefWidth="1158.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="102.0" prefWidth="1158.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
                <children>
-                  <Pane prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #101242;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <HBox layoutX="340.0" layoutY="-10.0" prefHeight="55.0" prefWidth="818.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" contentDisplay="CENTER" prefHeight="77.0" prefWidth="157.0" style="-fx-background-color: White;" text="Add" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="3.0" right="3.0" />
+                           </HBox.margin></JFXButton>
+                        <JFXButton buttonType="RAISED" contentDisplay="CENTER" prefHeight="77.0" prefWidth="157.0" style="-fx-background-color: White;" text="Remove" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="3.0" right="3.0" />
+                           </HBox.margin></JFXButton>
+                        <JFXButton buttonType="RAISED" contentDisplay="CENTER" prefHeight="77.0" prefWidth="147.0" style="-fx-background-color: White;" text="Edit" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="3.0" right="3.0" />
+                           </HBox.margin></JFXButton>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="77.0" prefWidth="144.0" style="-fx-background-color: White;" text="16/11/21" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="3.0" right="3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <JFXButton buttonType="RAISED" contentDisplay="CENTER" prefHeight="77.0" prefWidth="103.0" style="-fx-background-color: White;" text="Prev" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="3.0" right="3.0" />
+                           </HBox.margin></JFXButton>
+                        <JFXButton buttonType="RAISED" contentDisplay="CENTER" prefHeight="77.0" prefWidth="110.0" style="-fx-background-color: White;" text="Next" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="3.0" right="3.0" />
+                           </HBox.margin></JFXButton>
+                     </children>
+                  </HBox>
+                  <JFXHamburger fx:id="hamOpener" layoutX="14.0" layoutY="51.0" prefHeight="43.0" prefWidth="67.0" />
+                  <Label layoutX="81.0" layoutY="54.0" text="Menu">
+                     <font>
+                        <Font name="System Bold Italic" size="26.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="105.0" fitWidth="144.0" layoutX="202.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@nrlogo.png" />
+                     </image>
+                  </ImageView>
                </children></AnchorPane>
          </top>
-         <center>
-            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-               <children>
-                  <JFXButton prefHeight="202.0" prefWidth="301.0" ripplerFill="RED" />
-                  <JFXButton prefHeight="154.0" prefWidth="231.0" ripplerFill="RED" />
-               </children>
-
-            </HBox>
-         </center>
       </BorderPane>
     </children>
 </AnchorPane>
