@@ -44,49 +44,15 @@ public class MainPageController implements Initializable {
         HamburgerBackArrowBasicTransition transition = new HamburgerBackArrowBasicTransition(hamOpener);
         transition.setRate(-1);
         hamOpener.addEventHandler(MouseEvent.MOUSE_PRESSED, (event -> {
-            if(transition.getRate() == -1){
+            if (transition.getRate() == -1) {
                 openSlide();
-            }else{
+            } else {
                 closeSlide();
             }
             transition.setRate(transition.getRate() * -1);
             transition.play();
         }));
-
-
-
-//        Menu.setOnMouseClicked(event -> {
-//            TranslateTransition slide = new TranslateTransition();
-//            slide.setDuration(Duration.seconds(0.4));
-//            slide.setNode(menuInterface);
-//
-//            slide.setToX(0);
-//            slide.play();
-//
-//            menuInterface.setTranslateX(-340);
-//
-//            slide.setOnFinished((ActionEvent e) -> {
-//                Menu.setVisible(false);
-//                MenuBack.setVisible(true);
-//            });
-//        });
-//
-//        MenuBack.setOnMouseClicked(event -> {
-//            TranslateTransition slide = new TranslateTransition();
-//            slide.setDuration(Duration.seconds(0.4));
-//            slide.setNode(menuInterface);
-//
-//            slide.setToX(-340);
-//            slide.play();
-//
-//            menuInterface.setTranslateX(0);
-//
-//            slide.setOnFinished((ActionEvent e) -> {
-//                Menu.setVisible(true);
-//                MenuBack.setVisible(false);
-//            });
-//        });
-}
+    }
 
     private void FadeInTransition() {
         FadeTransition fadeTransition = new FadeTransition();
