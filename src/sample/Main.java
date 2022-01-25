@@ -23,14 +23,6 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         try {
-            jdbc jdbc = new jdbc("");
-            //test.joinTables("TBLWarrior", "TBLAllocation");
-           // jdbc.updateTable("TBLWarrior", "warriorname", "Agathathecoolkid", "AGATHATHEMIFFED");
-           // jdbc.alterTable("TBLWarrior" ,"WarriorID", "ID");
-
-            ///jdbc.addNewColumn("TBLWarrior", "practicecollumn", "INT");
-            jdbc.viewAll("TBLWarrior" , "ID");
-            //jdbc.viewAllRecordsInCollumn("TBLWarrior", "ID");
             launch(args);
         }catch (Exception e){
             System.out.println(e.getMessage());

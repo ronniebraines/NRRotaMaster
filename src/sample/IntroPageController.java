@@ -12,11 +12,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -39,7 +37,7 @@ public class IntroPageController implements Initializable {
 
     private void fadeOut() {
         FadeTransition fadeTransition = new FadeTransition();
-        fadeTransition.setDuration(Duration.millis(1000));
+        fadeTransition.setDuration(Duration.millis(400));
         fadeTransition.setNode(rootPane);
         fadeTransition.setFromValue(1);
         fadeTransition.setToValue(0);
@@ -47,18 +45,17 @@ public class IntroPageController implements Initializable {
         fadeTransition.setOnFinished(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                loadNextScene("loginpage.fxml");
+                loadNextScene();
             }
         });
         fadeTransition.play();
     }
 
-    public void loadNextScene(String nextScene){
+    public void loadNextScene(){
+        URL fxmlfile = getClass().getResource("loginpage.fxml");
         try {
-            Parent secondView;
-            secondView = (BorderPane) FXMLLoader.load(getClass().getResource(nextScene));
+            Parent secondView = FXMLLoader.load(fxmlfile);
             Scene nextPage = new Scene(secondView);
-
             Stage curStage = (Stage) rootPane.getScene().getWindow();
             curStage.setScene(nextPage);
         }catch (IOException ex){
